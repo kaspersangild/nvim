@@ -48,9 +48,9 @@ return require('packer').startup(function(use)
 	  run = ':TSUpdate'
   }
 
-  use 'folke/tokyonight.nvim'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use { "ellisonleao/gruvbox.nvim" }
 
   if packer_bootstrap then
     require('packer').sync()
