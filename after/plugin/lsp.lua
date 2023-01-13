@@ -11,6 +11,18 @@ lsp.ensure_installed({
   'texlab'
 })
 
+lsp.configure('pyright', {
+  settings = {
+    python = {
+      analysis = {
+          autoSearchPath = true,
+          useLibraryCodeForTypes = true,
+          diagnosticMode = "openFilesOnly",
+          typeCheckingMode = "off"
+      }
+    }
+  }
+})
 -- Configure lua language server for neovim
 lsp.nvim_workspace()
 
